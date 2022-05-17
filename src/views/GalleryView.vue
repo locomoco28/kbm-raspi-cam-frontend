@@ -27,12 +27,19 @@ const images: Image[] = [
 </script>
 
 <template>
-  <div class="columns">
-    <div class="column has-text-centered">
-      <h1 class="title">Gallery</h1>
+  <div class="container">
+    <div class="section">
+      <div class="columns">
+        <div class="column has-text-centered">
+          <h1 class="title">Gallery</h1>
+          <br />
+        </div>
+      </div>
+      <div class="row container">
+        <div class="columns">
+          <GalleryItem v-for="(img, i) in images" :key="i" :img="img" />
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="row columns is-multiline">
-    <GalleryItem v-for="(img, i) in images" :key="i" :img="img" />
   </div>
 </template>
